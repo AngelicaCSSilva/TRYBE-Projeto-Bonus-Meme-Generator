@@ -14,7 +14,7 @@ function showTextWhileTyping() {
 
 // ref.: https://stackoverflow.com/questions/11708797/inserting-a-file-input-as-an-img-in-the-dom
 function addImage() {
-  const img = document.createElement('img')
+  const img = document.createElement('img');
   img.id = 'meme-image';
   img.src = URL.createObjectURL(file.files[0]);
   memeContainer.appendChild(img);
