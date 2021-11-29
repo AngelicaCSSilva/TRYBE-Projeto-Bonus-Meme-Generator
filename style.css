@@ -1,0 +1,26 @@
+main {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  background-color: antiquewhite;
+}
+
+.container {
+  margin: 1em;
+}
+
+#text-input {
+  border: 0.1em solid black;
+  border-radius: 5em;
+  padding: 1em;
+  width: 20em;
+  display: inline-block;
+}
+
+#meme-image-container {
+  margin: 3em;
+  padding: 15em;
+}
