@@ -6,21 +6,46 @@ main {
   align-items: center;
   align-content: center;
   background-color: antiquewhite;
+  padding: 2em 0em;
 }
 
 .container {
+  background-color: bisque;
+  padding: 1em;
+  border-radius: 5em;
   margin: 1em;
 }
 
 #text-input {
   border: 0.1em solid black;
-  border-radius: 5em;
+  border-radius: 25em;
   padding: 1em;
   width: 20em;
   display: inline-block;
 }
 
 #meme-image-container {
-  margin: 3em;
-  padding: 15em;
+  width: 350px;
+  height: 350px;
+  position: relative;
+  text-align: center;
+  margin: auto;
+  overflow: hidden;
+  background-color: white;
+}
+
+#meme-text {
+  position: absolute;
+  bottom: 0;
+  font-size: 2em;
+  color: white;
+  /* ref.: https://stackoverflow.com/questions/13426875/text-border-using-css-border-around-text */
+  text-shadow: 2px 0 0 black, -2px 0 0 black, 0 2px 0 black, 0 -2px 0 black, 1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
+  width: 350px;
+  overflow-wrap: break-word;
+}
+
+#meme-image {
+  width: 350px;
+  height: 350px;
 }
