@@ -28,5 +28,34 @@ function btnImg() {
   file.addEventListener('change', addImage);
 }
 
+function fireStyle() {
+  memeContainer.style.border = '3px dashed red';
+}
+
+function fireBtn() {
+  const btnFire = document.querySelector('#fire');
+  btnFire.addEventListener('click', fireStyle);
+}
+
+function waterStyle() {
+  memeContainer.style.border = '5px double blue';
+}
+
+function waterBtn() {
+  const btnWater = document.querySelector('#water');
+  btnWater.addEventListener('click', waterStyle);
+}
+
+function earthStyle() {
+  memeContainer.style.border = '6px groove green';
+}
+
+function earthBtn() {
+  const btnEarth = document.querySelector('#earth');
+  btnEarth.addEventListener('click', earthStyle);
+}
 showTextWhileTyping();
 btnImg();
+fireBtn();
+waterBtn();
+earthBtn();
