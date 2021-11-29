@@ -20,7 +20,7 @@ function cleanPreviousMeme() {
   }
 }
 
-// Função que adiciona a imagem dentro do do div#meme-image-container
+// Função que adiciona a imagem dentro da div#meme-image-container.
 // ref.: https://stackoverflow.com/questions/11708797/inserting-a-file-input-as-an-img-in-the-dom
 function addImage() {
   cleanPreviousMeme();
@@ -30,11 +30,12 @@ function addImage() {
   memeContainer.appendChild(img);
 }
 
-// Função que adiciona o Event Listener no input(file) para realizar a adição da imagem ao container
+// Função que adiciona o Event Listener no input(file) para realizar a adição da imagem ao container.
 function btnImg() {
   file.addEventListener('change', addImage);
 }
 
+// Função que adiciona borda estilizada FIRE.
 function fireStyle() {
   memeContainer.style.border = '3px dashed red';
 }
@@ -44,6 +45,7 @@ function fireBtn() {
   btnFire.addEventListener('click', fireStyle);
 }
 
+// Função que adiciona borda estilizada WATER.
 function waterStyle() {
   memeContainer.style.border = '5px double blue';
 }
@@ -53,6 +55,7 @@ function waterBtn() {
   btnWater.addEventListener('click', waterStyle);
 }
 
+// Função que adiciona borda estilizada EARTH.
 function earthStyle() {
   memeContainer.style.border = '6px groove green';
 }
@@ -62,6 +65,7 @@ function earthBtn() {
   btnEarth.addEventListener('click', earthStyle);
 }
 
+// Função que adiciona a imagem do meme pré pronto.
 function addPremadeMeme(event) {
   let memeToUse = event.target;
   memeToUse = getComputedStyle(memeToUse);
@@ -76,6 +80,7 @@ function addPremadeMeme(event) {
   memeContainer.appendChild(img);
 }
 
+// Função que adiciona o Event Listener aos memes pré prontos.
 function premadeMemeToImg() {
   const memes = document.querySelectorAll('.memes');
   for (let index = 0; index < memes.length; index += 1) {
