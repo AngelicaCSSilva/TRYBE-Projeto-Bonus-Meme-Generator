@@ -14,9 +14,16 @@ function showTextWhileTyping() {
   textInput.addEventListener('keyup', insertTextOnDiv);
 }
 
+function cleanPreviousMeme() {
+  if (textMeme.nextSibling != null) {
+    memeContainer.removeChild(textMeme.nextSibling);
+  }
+}
+
 // Função que adiciona a imagem dentro do do div#meme-image-container
 // ref.: https://stackoverflow.com/questions/11708797/inserting-a-file-input-as-an-img-in-the-dom
 function addImage() {
+  cleanPreviousMeme();
   const img = document.createElement('img');
   img.id = 'meme-image';
   img.src = URL.createObjectURL(file.files[0]);
@@ -54,8 +61,31 @@ function earthBtn() {
   const btnEarth = document.querySelector('#earth');
   btnEarth.addEventListener('click', earthStyle);
 }
+
+function addPremadeMeme(event) {
+  let memeToUse = event.target;
+  memeToUse = getComputedStyle(memeToUse);
+
+  // ref.: https://stackoverflow.com/questions/14013131/how-to-get-background-image-url-of-an-element-using-javascript
+  // Slice retira 'url(' e o ')'. Replace remove os "".
+  memeToUse = memeToUse.backgroundImage.slice(4, -1).replace(/"/g, '');
+  cleanPreviousMeme();
+  const img = document.createElement('img');
+  img.id = 'meme-image';
+  img.src = memeToUse;
+  memeContainer.appendChild(img);
+}
+
+function premadeMemeToImg() {
+  const memes = document.querySelectorAll('.memes');
+  for (let index = 0; index < memes.length; index += 1) {
+    memes[index].addEventListener('click', addPremadeMeme);
+  }
+}
+
 showTextWhileTyping();
 btnImg();
 fireBtn();
 waterBtn();
 earthBtn();
+premadeMemeToImg();

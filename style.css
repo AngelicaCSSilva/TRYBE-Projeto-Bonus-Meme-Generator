@@ -1,3 +1,7 @@
+body {
+  font-family: Calibri, sans-serif;
+}
+
 main {
   display: flex;
   flex: flow;
@@ -12,8 +16,7 @@ main {
 .container {
   background-color: bisque;
   padding: 1em;
-  border-radius: 5em;
-  margin: 1em;
+  margin: 0.5em 0;
   text-align: center;
 }
 
@@ -34,6 +37,11 @@ main {
   overflow: hidden;
   background-color: white;
   border: 1px solid black;
+}
+
+#meme-insert {
+  background-color: lightgoldenrodyellow;
+  padding: 2px;
 }
 
 #meme-text {
@@ -72,4 +80,31 @@ button {
 
 #earth {
   background-color: green;
+}
+
+.memes {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+}
+
+#meme-1 {
+  background-image: url('./imgs/meme1.png');
+  background-size: cover;
+}
+
+#meme-2 {
+  background-image: url('./imgs/meme2.png');
+  background-size: cover;
+}
+
+#meme-3 {
+  background-image: url('./imgs/meme3.png');
+  background-size: cover;
+}
+
+#meme-4 {
+  background-image: url('./imgs/meme4.png');
+  background-size: cover;
 }
