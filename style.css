@@ -38,10 +38,10 @@ main {
 #meme-text {
   position: absolute;
   bottom: 0;
-  font-size: 2em;
+  font-size: 30px;
   color: white;
-  /* ref.: https://stackoverflow.com/questions/13426875/text-border-using-css-border-around-text */
-  text-shadow: 2px 0 0 black, -2px 0 0 black, 0 2px 0 black, 0 -2px 0 black, 1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
+  /* ref.: https://developer.mozilla.org/pt-BR/docs/Web/CSS/text-shadow */
+  text-shadow: 5px 5px 5px black;
   width: 350px;
   overflow-wrap: break-word;
 }
